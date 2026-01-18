@@ -58,3 +58,39 @@ async function checkLink() {
     <p>Details dashboard se check karein.</p>
   `;
 }
+/* Link Spam Checker (Demo & Legal) */
+function checkLink() {
+  const url = document.getElementById("urlInput").value.trim();
+  const result = document.getElementById("linkResult");
+
+  if (url === "") {
+    result.innerHTML = "⚠️ Pehle link paste karein.";
+    return;
+  }
+
+  const spamWords = [
+    "free",
+    "login",
+    "verify",
+    "bonus",
+    "secure",
+    "update",
+    "account"
+  ];
+
+  const lowerUrl = url.toLowerCase();
+  const isSpam = spamWords.some(word => lowerUrl.includes(word));
+
+  if (isSpam) {
+    result.innerHTML = `
+      ❌ <b>Suspicious / Spam Link</b><br>
+      Is link mein risky keywords paye gaye.<br>
+      <small>Advice: Open na karein</small>
+    `;
+  } else {
+    result.innerHTML = `
+      ✅ <b>Link Looks Safe</b><br>
+      Koi obvious spam signal nahi mila.
+    `;
+  }
+}
