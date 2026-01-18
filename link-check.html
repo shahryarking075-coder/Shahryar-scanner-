@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ur">
+<head>
+  <meta charset="UTF-8">
+  <title>Link Spam Checker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>Link Spam Checker</h1>
+    <p class="tagline">Link paste karein aur safety check karein</p>
+
+    <input type="text" id="urlInput" class="input-box"
+           placeholder="https://example.com">
+
+    <button class="main-btn" onclick="checkLink()">Check Link</button>
+
+    <div id="linkResult" class="result-box"></div>
+
+    <button class="back-btn" onclick="goHome()">⬅ Back</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
