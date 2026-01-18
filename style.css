@@ -80,3 +80,16 @@ h1 {
   font-size: 13px;
   color: #9ca3af;
 }
+.input-box {
+  width: 90%;
+  max-width: 400px;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  margin: 10px 0;
+  font-size: 15px;
+}
+
+.link-checker {
+  margin-top: 30px;
+}
